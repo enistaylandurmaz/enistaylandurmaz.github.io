@@ -94,7 +94,7 @@ header {
     border: 2px solid #fff;  /* Sets the border width, style, and color */
     border-radius: 50px;  /* Adjusts the border-radius */
     padding: 10px;
-    background-color:black;
+    background-color:#212529;
 }
 
 .languages-list {
