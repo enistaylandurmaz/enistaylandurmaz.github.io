@@ -6,7 +6,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    background: #000; /* Set background to black */
+    background: #212529; /* Set background to black */
     color: #fff; /* Set text color to white for contrast */
 }
 
@@ -169,7 +169,7 @@ footer {
 }
 
 button {
-    background-color: black;
+    background-color: #212529;
     color:aliceblue;
     display: block;
     width: 100px;
@@ -179,13 +179,13 @@ button {
     border: 1px solid #fff;
 }
 button:hover {
-    background-color: #8f8a8a;
-    color:black;
+    background-color: #212529;
+    color:#212529;
     border: 1px solid black;
 }
 
 notbutton {
-    background-color: black;
+    background-color: #212529;
     color:aliceblue;
     display: block;
     width: 60px;
