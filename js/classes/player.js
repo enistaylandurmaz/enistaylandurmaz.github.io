@@ -8,7 +8,7 @@ class Player{
         };
         this.gravity = 0.08;
         this.horizontalAcceleration = 0;
-        this.maxSpeed = 10; // Maximum horizontal speed
+        this.maxSpeed = 6; // Maximum horizontal speed
         this.deceleration = 0.99; // Deceleration factor
         this.onGround = false;
         this.walljump = true;
@@ -151,7 +151,7 @@ class Player{
                 collisionDetected = true;
                 if (this.velocity.y > 0) {
                     this.position.y = collisionblock.position.y - this.height -0.01;
-                    this.velocity.y = -this.velocity.y * 0.7; // Bounce effect
+                    this.velocity.y = -this.velocity.y * 0.4; // Bounce effect
                     this.canJump = true; // Allow jumping again
                     this.walljump = true;
                     break
@@ -181,7 +181,7 @@ class Player{
                 collisionDetected = true;
                 if (this.velocity.x > 0) {
                     this.position.x = collisionblock.position.x - this.width -0.01;
-                    this.velocity.x = -this.velocity.x * 0.7; // Bounce effect
+                    this.velocity.x = -this.velocity.x * 0.3; // Bounce effect
                     if (this.walljump){
                         this.canJump = true;
                     }
@@ -190,7 +190,7 @@ class Player{
                 }
                 else if (this.velocity.x < 0) {
                     this.position.x = collisionblock.position.x + collisionblock.width + 0.01;
-                    this.velocity.x = -this.velocity.x * 0.7;
+                    this.velocity.x = -this.velocity.x * 0.3;
                     if (this.walljump){
                         this.canJump = true;
                     }
