@@ -78,7 +78,7 @@ let enemies = [
       }),
       new enemy({
         position: { x: 49*16, y: 158*16 },
-        speed: 0.6,
+        speed: 0.2,
         collisionblocks,
         width: 16, 
         height: 16
