@@ -1,0 +1,196 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background: #000; /* Set background to black */
+    color: #fff; /* Set text color to white for contrast */
+}
+
+/* Add a container for the content */
+.container { /* Assuming this is a new div around your sections */
+    display: grid;
+    place-items: center; /* Shortcut to center items both vertically and horizontally */
+    height: 100vh; /* Use the full height of the viewport */
+    margin-bottom:650px;
+}
+
+.content {
+    text-align: center; /* Center text inside the content blocks */
+    max-width: 500px; /* Adjust width as necessary */
+    margin: 20px; /* Space between sections */
+}
+.footer{
+    width: 100%;
+    padding-bottom: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 1rem 5%; /* Add padding on the left and right */
+}
+
+
+
+.left-header h1 {
+    margin: 0; /* Removes default margin from the h1 tag */
+    font-size: 1.5em; /* Adjust size as needed */
+}
+
+.right-header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Removes default margin from the ul tag */
+    font-size: 1.2em; /* Make list items bigger */
+}
+
+.right-header ul li {
+    margin: 0 15px; /* Increase spacing between list items */
+}
+
+.right-header ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px; /* Add padding for larger click area */
+}
+
+#projects h2 {
+    margin-bottom: 20px; /* Adds space below the Projects heading */
+}
+
+.project {
+    margin-bottom: 100px; /* Adds space below each project div */
+    padding: 20px; /* Optional: Adds padding inside each project div for better spacing */
+    border-radius: 5px; /* Optional: Rounds the corners of the project divs */
+}
+
+.project h3 {
+    margin-top: 0;
+    margin-bottom: 100px; /* Adds space below each project title */
+}
+.project h4 {
+    margin-bottom: 40px;
+}
+
+.project p {
+    margin-bottom: 20px; /* Adds space below the paragraph before the button, if any */
+}
+.projectception {
+    margin-bottom: 20px;  /* Adjust as needed */
+    border: 2px solid #fff;  /* Sets the border width, style, and color */
+    border-radius: 50px;  /* Adjusts the border-radius */
+    padding: 10px;
+    background-color:#333;
+}
+.contact {
+    margin-bottom: 20px;  /* Adjust as needed */
+    border: 2px solid #fff;  /* Sets the border width, style, and color */
+    border-radius: 50px;  /* Adjusts the border-radius */
+    padding: 10px;
+    background-color:black;
+}
+
+.languages-list {
+    list-style-type: none;  /* Removes default list bullets */
+    padding: 0;  /* Removes default padding */
+    text-align: center;  /* Aligns text to the left */
+}
+
+.languages-list li {
+    margin: 10px 0;  /* Adds vertical space between list items */
+}
+
+.languages-list a {
+    color: inherit;  /* Ensures the links use the text color of the parent element */
+    text-decoration: none;  /* Removes the underline */
+    padding: 8px;  /* Adds padding around the text */
+    display: inline-block;  /* Makes the link only as wide as its content */
+    border-radius: 5px;  /* Applies rounded corners */
+}
+
+.languages-list a:hover {
+    background-color: #e1e1e1;  /* Changes background on hover */
+    border-radius: 5px;  /* Rounded corners for a better look */
+    color:black; 
+}
+
+.email-logo {
+    vertical-align: middle;
+    margin-right: 5px; /* Adjust as needed */
+    width: 30px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.github_link {
+    color: white !important; /* Ensures the text is white */
+    text-decoration: none !important; /* Ensures no underline */
+    font-size: 14px;
+}
+
+.email-address {
+    color: white !important; /* Ensures the text is white */
+    text-decoration: none !important; /* Ensures no underline */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    width: 100%;
+}
+
+button {
+    background-color: black;
+    color:aliceblue;
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 100px;
+    border: 1px solid #fff;
+}
+button:hover {
+    background-color: #8f8a8a;
+    color:black;
+    border: 1px solid black;
+}
+
+notbutton {
+    background-color: black;
+    color:aliceblue;
+    display: block;
+    width: 60px;
+    padding: 5px;
+    margin:20px auto;
+    border-radius: 100px;
+    border: 1px solid #fff;
+}
