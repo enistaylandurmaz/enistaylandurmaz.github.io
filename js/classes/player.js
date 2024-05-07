@@ -6,9 +6,9 @@ class Player{
             x: 0,
             y: 0
         };
-        this.gravity = 0.08;
+        this.gravity = 0.10;
         this.horizontalAcceleration = 0;
-        this.maxSpeed = 6; // Maximum horizontal speed
+        this.maxSpeed = 5; // Maximum horizontal speed
         this.deceleration = 0.99; // Deceleration factor
         this.onGround = false;
         this.walljump = true;
@@ -133,7 +133,7 @@ class Player{
     }
     jump() {
         if (this.canJump) {
-            this.velocity.y = -3.4; // Negative value for upward movement
+            this.velocity.y = -3.5; // Negative value for upward movement
             this.canJump = false; // Reset the jump flag
             this.onGround = false; // The player is no longer on the ground
         }
@@ -151,7 +151,7 @@ class Player{
                 collisionDetected = true;
                 if (this.velocity.y > 0) {
                     this.position.y = collisionblock.position.y - this.height -0.01;
-                    this.velocity.y = -this.velocity.y * 0.4; // Bounce effect
+                    this.velocity.y = -this.velocity.y * 0.5; // Bounce effect
                     this.canJump = true; // Allow jumping again
                     this.walljump = true;
                     break
@@ -181,7 +181,7 @@ class Player{
                 collisionDetected = true;
                 if (this.velocity.x > 0) {
                     this.position.x = collisionblock.position.x - this.width -0.01;
-                    this.velocity.x = -this.velocity.x * 0.3; // Bounce effect
+                    this.velocity.x = -this.velocity.x * 0.4; // Bounce effect
                     if (this.walljump){
                         this.canJump = true;
                     }
@@ -190,7 +190,7 @@ class Player{
                 }
                 else if (this.velocity.x < 0) {
                     this.position.x = collisionblock.position.x + collisionblock.width + 0.01;
-                    this.velocity.x = -this.velocity.x * 0.3;
+                    this.velocity.x = -this.velocity.x * 0.4;
                     if (this.walljump){
                         this.canJump = true;
                     }

@@ -11,7 +11,7 @@
         },
         {
             "signPosition": { "x": 896, "y": 2560 },
-            "imageSrc": "./img/right_sign.png",
+            "imageSrc": "./img/left_sign.png",
             "textContent": "Beware the bat, it will do everything it can to stop you.",
             "displayTextPosition": { "x": 840, "y": 2460 },
             "textStyle": "8px cript",
@@ -21,7 +21,7 @@
             },
             {
                 "signPosition": { "x": 304, "y": 2464 },
-                "imageSrc": "./img/right_sign.png",
+                "imageSrc": "./img/left_sign.png",
                 "textContent": "Congratulations!!! If you played enough to come here, it means that I stole at least a few minutes from your life which is great!!! Please have fun with the bats.",
                 "displayTextPosition": { "x": 200, "y": 2364 },
                 "textStyle": "8px cript",

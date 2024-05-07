@@ -126,22 +126,36 @@ const camera ={
         y:-pngHeight + scaled_canvas.height
     }
 }
+const fps = 100;  // Frames per second
+const interval = 1000 / fps;  // Interval in milliseconds
+let lastTime = 0;
 
-function animate() {
-    animationFrameId = window.requestAnimationFrame(animate);
+function animate(timestamp) {
+    requestAnimationFrame(animate);  // Continue the loop
+
+    if (timestamp - lastTime < interval) {
+        return;  // Skip the frame if the interval isn't passed
+    }
+
+    lastTime = timestamp - (timestamp % interval);  // Adjust lastTime by the frame slippage
+
+    // Game updates and rendering
     c.fillStyle = 'white';
     c.fillRect(0, 0, canvas.width, canvas.height);
-    c.save()
+    c.save();
     c.scale(3,3)
-    c.translate(camera.position.x,camera.position.y)
-    player.camera_to_right({scaled_canvas,camera,canvas})
-    player.camera_to_left({scaled_canvas,camera,canvas})
-    player.camera_to_up({scaled_canvas,camera,canvas})
-    player.camera_to_down({scaled_canvas,camera, canvas})
-    collisionblocks.forEach(collisionblock =>{
-        collisionblock.update()
-    })
-    background.update()
+    c.translate(camera.position.x, camera.position.y);
+    
+    // Sub-function calls remain unchanged
+    player.camera_to_right({scaled_canvas, camera, canvas});
+    player.camera_to_left({scaled_canvas, camera, canvas});
+    player.camera_to_up({scaled_canvas, camera, canvas});
+    player.camera_to_down({scaled_canvas, camera, canvas});
+    
+    collisionblocks.forEach(collisionblock => {
+        collisionblock.update();
+    });
+    background.update();
     chests.forEach(chest => {
         chest.update();
         if (chest.keyCollected) {
@@ -154,21 +168,22 @@ function animate() {
     signs.forEach(sign => {
         sign.update();
     });
-    enemies.forEach(enemy=>{
+    enemies.forEach(enemy => {
         enemy.update();
     });
-    player.update()
-    c.restore()
+    player.update();
+    
+    c.restore();
 }
 
 
 window.addEventListener('keydown', (event) => {
     switch (event.key) {
         case 'ArrowRight':
-            player.horizontalAcceleration = 0.025;
+            player.horizontalAcceleration = 0.046;
             break;
         case 'ArrowLeft':
-            player.horizontalAcceleration = -0.025;
+            player.horizontalAcceleration = -0.046;
             break;
         case 'ArrowUp':
             player.jump();
