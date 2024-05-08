@@ -64,7 +64,8 @@ class sprite {
                         chest.keyCollected = false; // Player loses the key
                     }
                     else {
-                        player.velocity.x = 0
+                        player.velocity.x = 0;
+                        player.position.x = door.position.x;
                         
                     }
                 });
