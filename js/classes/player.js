@@ -109,31 +109,35 @@ class Player{
         // Update position with the current velocity
         this.position.y += this.velocity.y;
     }
-    acceleration_deceleration(){
-        if (this.velocity.x !== 0) {
-            this.rotation += this.velocity.x / 20; // Adjust rotation speed if necessary
-        }
-        // Horizontal movement
+    acceleration_deceleration() {
+        // Horizontal movement logic
         if (this.horizontalAcceleration !== 0) {
             // Apply acceleration
             this.velocity.x += this.horizontalAcceleration;
+            // Clamp velocity to max speed
             if (Math.abs(this.velocity.x) > this.maxSpeed) {
-                // Clamp velocity to max speed
                 this.velocity.x = this.maxSpeed * Math.sign(this.velocity.x);
             }
         } else {
             // Apply deceleration
             this.velocity.x *= this.deceleration;
+            // Stop completely if the speed is very low, to prevent unnecessary tiny movements
             if (Math.abs(this.velocity.x) < 0.1) {
-                // Stop completely if the speed is very low
                 this.velocity.x = 0;
             }
         }
+    
+        // Update position based on new velocity
         this.position.x += this.velocity.x;
+    
+        // Optional: Adjust rotation based on velocity
+        if (this.velocity.x !== 0) {
+            this.rotation += this.velocity.x / 20; // Adjust rotation speed if necessary
+        }
     }
     jump() {
         if (this.canJump) {
-            this.velocity.y = -3.6; // Negative value for upward movement
+            this.velocity.y = -3.7; // Negative value for upward movement
             this.canJump = false; // Reset the jump flag
             this.onGround = false; // The player is no longer on the ground
         }
