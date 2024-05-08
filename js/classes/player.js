@@ -8,7 +8,7 @@ class Player{
         };
         this.gravity = 0.08;
         this.horizontalAcceleration = 0;
-        this.maxSpeed = 5; // Maximum horizontal speed
+        this.maxSpeed = 2; // Maximum horizontal speed
         this.deceleration = 0.99; // Deceleration factor
         this.onGround = false;
         this.walljump = true;
@@ -133,7 +133,7 @@ class Player{
     }
     jump() {
         if (this.canJump) {
-            this.velocity.y = -3.7; // Negative value for upward movement
+            this.velocity.y = -3.6; // Negative value for upward movement
             this.canJump = false; // Reset the jump flag
             this.onGround = false; // The player is no longer on the ground
         }
