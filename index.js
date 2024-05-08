@@ -177,27 +177,43 @@ function animate(timestamp) {
 }
 
 
+function updateAcceleration() {
+    if (rightPressed && !leftPressed) { // Only apply right acceleration if left is not pressed
+        player.horizontalAcceleration = 0.040;
+    } else if (leftPressed && !rightPressed) { // Only apply left acceleration if right is not pressed
+        player.horizontalAcceleration = -0.040;
+    } else {
+        player.horizontalAcceleration = 0; // Neutralize acceleration if both or neither are pressed
+    }
+}
+let rightPressed = false;
+let leftPressed = false;
+
 window.addEventListener('keydown', (event) => {
     switch (event.key) {
         case 'ArrowRight':
-            player.horizontalAcceleration = 0.040;
+            rightPressed = true;
             break;
         case 'ArrowLeft':
-            player.horizontalAcceleration = -0.040;
+            leftPressed = true;
             break;
         case 'ArrowUp':
             player.jump();
             break;
     }
+    updateAcceleration();
 });
 
 window.addEventListener('keyup', (event) => {
     switch (event.key) {
         case 'ArrowRight':
+            rightPressed = false;
+            break;
         case 'ArrowLeft':
-            player.horizontalAcceleration = 0; // Stop acceleration
+            leftPressed = false;
             break;
     }
+    updateAcceleration();
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
