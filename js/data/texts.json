@@ -20,10 +20,10 @@
             "lineHeight": 10
             },
             {
-                "signPosition": { "x": 260, "y": 2464 },
+                "signPosition": { "x": 304, "y": 2464 },
                 "imageSrc": "./img/left_sign.png",
                 "textContent": "Congratulations!!! If you played enough to come here, it means that I stole at least a few minutes from your life which is great!!! Please have fun with the bats.",
-                "displayTextPosition": { "x": 200, "y": 2364 },
+                "displayTextPosition": { "x": 150, "y": 2364 },
                 "textStyle": "8px cript",
                 "color": "eggshell",
                 "maxwidth": 150,
