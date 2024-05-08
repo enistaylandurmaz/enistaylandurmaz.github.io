@@ -68,17 +68,17 @@ const player = new Player({position:
 })
 
 let enemies = [
-    new enemy({position: { x: 14*16, y: 173*16 },speed: 0.8,collisionblocks,width: 16, height: 16}),
+    new enemy({position: { x: 14*16, y: 173*16 },speed: 0.9,collisionblocks,width: 16, height: 16}),
       new enemy({
         position: { x: 53*16, y: 169*16 },
-        speed: 0.7,
+        speed: 0.9,
         collisionblocks,
         width: 16, 
         height: 16
       }),
       new enemy({
         position: { x: 49*16, y: 158*16 },
-        speed: 0.2,
+        speed: 0.9,
         collisionblocks,
         width: 16, 
         height: 16
@@ -126,7 +126,7 @@ const camera ={
         y:-pngHeight + scaled_canvas.height
     }
 }
-const fps = 144;  // Frames per second
+const fps = 100;  // Frames per second
 const interval = 1000 / fps;  // Interval in milliseconds
 let lastTime = 0;
 
