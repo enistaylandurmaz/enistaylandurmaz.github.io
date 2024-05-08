@@ -181,7 +181,7 @@ class Player{
                 collisionDetected = true;
                 if (this.velocity.x > 0) {
                     this.position.x = collisionblock.position.x - this.width -0.01;
-                    this.velocity.x = -this.velocity.x * 0.9; // Bounce effect
+                    this.velocity.x = -this.velocity.x * 0.4; // Bounce effect
                     if (this.walljump){
                         this.canJump = true;
                     }
@@ -190,7 +190,7 @@ class Player{
                 }
                 else if (this.velocity.x < 0) {
                     this.position.x = collisionblock.position.x + collisionblock.width + 0.01;
-                    this.velocity.x = -this.velocity.x * 0.9;
+                    this.velocity.x = -this.velocity.x * 0.4;
                     if (this.walljump){
                         this.canJump = true;
                     }
