@@ -133,7 +133,7 @@ class Player{
     }
     jump() {
         if (this.canJump) {
-            this.velocity.y = -3.8; // Negative value for upward movement
+            this.velocity.y = -3.7; // Negative value for upward movement
             this.canJump = false; // Reset the jump flag
             this.onGround = false; // The player is no longer on the ground
         }

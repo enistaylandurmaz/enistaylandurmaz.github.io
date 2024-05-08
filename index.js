@@ -126,7 +126,7 @@ const camera ={
         y:-pngHeight + scaled_canvas.height
     }
 }
-const fps = 230;  // Frames per second
+const fps = 220;  // Frames per second
 const interval = 1000 / fps;  // Interval in milliseconds
 let lastTime = 0;
 
@@ -180,10 +180,10 @@ function animate(timestamp) {
 window.addEventListener('keydown', (event) => {
     switch (event.key) {
         case 'ArrowRight':
-            player.horizontalAcceleration = 0.042;
+            player.horizontalAcceleration = 0.040;
             break;
         case 'ArrowLeft':
-            player.horizontalAcceleration = -0.042;
+            player.horizontalAcceleration = -0.040;
             break;
         case 'ArrowUp':
             player.jump();

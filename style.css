@@ -179,9 +179,9 @@ button {
     border: 1px solid #fff;
 }
 button:hover {
-    background-color: #212529;
+    background-color: #adadae;
     color:#212529;
-    border: 1px solid black;
+    border: 1px solid #adadae;
 }
 
 notbutton {
@@ -193,4 +193,10 @@ notbutton {
     margin:20px auto;
     border-radius: 100px;
     border: 1px solid #fff;
+}
+
+notbutton:hover {
+    background-color: #adadae;
+    color:#212529;
+    border: 1px solid #adadae;
 }
