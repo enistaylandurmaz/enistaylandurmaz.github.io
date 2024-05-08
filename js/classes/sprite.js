@@ -65,7 +65,7 @@ class sprite {
                     }
                     else {
                         player.velocity.x = 0;
-                        player.position.x = door.position.x;
+                        player.position.x = door.position.x-16;
                         
                     }
                 });
