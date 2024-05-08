@@ -180,10 +180,10 @@ function animate(timestamp) {
 window.addEventListener('keydown', (event) => {
     switch (event.key) {
         case 'ArrowRight':
-            player.horizontalAcceleration = 0.046;
+            player.horizontalAcceleration = 0.042;
             break;
         case 'ArrowLeft':
-            player.horizontalAcceleration = -0.046;
+            player.horizontalAcceleration = -0.042;
             break;
         case 'ArrowUp':
             player.jump();
