@@ -129,9 +129,13 @@ header {
 }
 
 .github_link {
-    color: white !important; /* Ensures the text is white */
+    color: white; /* Ensures the text is white */
     text-decoration: none !important; /* Ensures no underline */
     font-size: 14px;
+}
+
+.github_link:hover {
+    color:#212529 !important;
 }
 
 .email-address {
