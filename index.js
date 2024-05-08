@@ -126,7 +126,7 @@ const camera ={
         y:-pngHeight + scaled_canvas.height
     }
 }
-const fps = 500;  // Frames per second
+const fps = 350;  // Frames per second
 const interval = 1000 / fps;  // Interval in milliseconds
 let lastTime = 0;
 
