@@ -6,7 +6,7 @@ class Player{
             x: 0,
             y: 0
         };
-        this.gravity = 0.10;
+        this.gravity = 0.8;
         this.horizontalAcceleration = 0;
         this.maxSpeed = 5; // Maximum horizontal speed
         this.deceleration = 0.99; // Deceleration factor
