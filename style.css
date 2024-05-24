@@ -128,16 +128,6 @@ header {
     height: auto; /* Maintain aspect ratio */
 }
 
-.github_link {
-    color: white; /* Ensures the text is white */
-    text-decoration: none !important; /* Ensures no underline */
-    font-size: 14px;
-}
-
-.github_link:hover {
-    color:#212529 !important;
-}
-
 .email-address {
     color: white !important; /* Ensures the text is white */
     text-decoration: none !important; /* Ensures no underline */
@@ -190,17 +180,32 @@ button:hover {
 
 notbutton {
     background-color: #212529;
-    color:aliceblue;
+    color: aliceblue;
     display: block;
     width: 60px;
     padding: 5px;
-    margin:20px auto;
+    margin: 20px auto;
     border-radius: 100px;
     border: 1px solid #fff;
 }
 
-notbutton:hover {
+notbutton:hover, notbutton:hover .github_link {
     background-color: #adadae;
-    color:#212529;
+    color: #212529;
     border: 1px solid #adadae;
+}
+
+.github_link {
+    color: white; /* Ensures the text is white */
+    text-decoration: none !important; /* Ensures no underline */
+    font-size: 14px;
+}
+
+.github_link:hover {
+    color: #212529 !important; /* Ensures the color changes on hover */
+}
+
+/* Ensure the .github_link inherits the hover state from the parent */
+notbutton:hover .github_link {
+    color: #212529 !important;
 }
