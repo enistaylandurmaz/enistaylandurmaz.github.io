@@ -98,13 +98,15 @@ header {
 }
 
 .languages-list {
-    list-style-type: none;  /* Removes default list bullets */
-    padding: 0;  /* Removes default padding */
-    text-align: center;  /* Aligns text to the left */
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;            /* Removes default padding */
+    display: flex;         /* Aligns items in a row */
+    justify-content: space-between; /* Distributes space between items */
 }
 
 .languages-list li {
-    margin: 10px 0;  /* Adds vertical space between list items */
+    flex: 1;               /* Each item will take up equal space in the container */
+    padding: 8px;          /* Adds some padding for better appearance */
 }
 
 .languages-list a {
@@ -120,7 +122,6 @@ header {
     border-radius: 5px;  /* Rounded corners for a better look */
     color:black; 
 }
-
 .email-logo {
     vertical-align: middle;
     margin-right: 5px; /* Adjust as needed */
